@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="DbaMapper">
+	
+	<select id="selectTmpTbl01Seq" resultType="int">
+        SELECT ifnull(max(seq)+1,1) from WBC_TMP_TBL01
+    </select>
+    <select id="selectTmpTbl02Seq" resultType="int">
+        SELECT ifnull(max(seq)+1,1) from WBC_TMP_TBL02
+    </select>
+    <select id="selectTmpTbl03Seq" resultType="int">
+        SELECT ifnull(max(seq)+1,1) from WBC_TMP_TBL03
+    </select>
+    <select id="selectTmpTbl04Seq" resultType="int">
+        SELECT ifnull(max(seq)+1,1) from WBC_TMP_TBL04
+    </select>
+    <select id="selectTmpTbl05Seq" resultType="int">
+        SELECT ifnull(max(seq)+1,1) from WBC_TMP_TBL05
+    </select>
+  	<select id="selectTmpTbl06Seq" resultType="int">
+        SELECT ifnull(max(seq)+1,1) from WBC_TMP_TBL06
+    </select>
+    <select id="selectTmpTbl07Seq" resultType="int">
+        SELECT ifnull(max(seq)+1,1) from WBC_TMP_TBL07
+    </select>
+    <select id="selectTmpTbl08Seq" resultType="int">
+        SELECT ifnull(max(seq)+1,1) from WBC_TMP_TBL08
+    </select>
+    <select id="selectTmpTbl09Seq" resultType="int">
+        SELECT ifnull(max(seq)+1,1) from WBC_TMP_TBL09
+    </select>
+    <select id="selectTmpTbl10Seq" resultType="int">
+        SELECT ifnull(max(seq)+1,1) from WBC_TMP_TBL10
+    </select>
+    <select id="selectTmpTbl11Seq" resultType="int">
+        SELECT ifnull(max(seq)+1,1) from WBC_TMP_TBL11
+    </select>
+    <select id="selectTmpTbl12Seq" resultType="int">
+        SELECT ifnull(max(seq)+1,1) from WBC_TMP_TBL12
+    </select>
+    <select id="selectTmpTbl13Seq" resultType="int">
+        SELECT ifnull(max(seq)+1,1) from WBC_TMP_TBL13
+    </select>
+    <select id="selectTmpTbl14Seq" resultType="int">
+        SELECT ifnull(max(seq)+1,1) from WBC_TMP_TBL14
+    </select>
+    <select id="selectTmpTbl15Seq" resultType="int">
+        SELECT ifnull(max(seq)+1,1) from WBC_TMP_TBL15
+    </select>
+  	<select id="selectTmpTbl16Seq" resultType="int">
+        SELECT ifnull(max(seq)+1,1) from WBC_TMP_TBL16
+    </select>
+    <select id="selectTmpTbl17Seq" resultType="int">
+        SELECT ifnull(max(seq)+1,1) from WBC_TMP_TBL17
+    </select>
+    <select id="selectTmpTbl18Seq" resultType="int">
+        SELECT ifnull(max(seq)+1,1) from WBC_TMP_TBL18
+    </select>
+    <select id="selectTmpTbl19Seq" resultType="int">
+        SELECT ifnull(max(seq)+1,1) from WBC_TMP_TBL19
+    </select>
+    <select id="selectTmpTbl20Seq" resultType="int">
+        SELECT ifnull(max(seq)+1,1) from WBC_TMP_TBL20
+    </select>
+    <insert id="insertTmpTbl01" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.insertTmpTbl01 */
+    	INSERT INTO 
+    		WBC_TMP_TBL01 (
+							SEQ
+							,URL_INF_SEQ
+               				,COL_NM
+							,COL_VAL
+                           ) VALUES (
+							#{seq}
+							,#{urlInfSeq}
+							,#{colNm}
+							,#{colVal}
+  							)
+    </insert>
+    <insert id="insertTmpTbl02" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.insertTmpTbl02 */
+    	INSERT INTO 
+    		WBC_TMP_TBL02 (
+							SEQ
+							,URL_INF_SEQ
+               				,COL_NM
+							,COL_VAL
+                           ) VALUES (
+							#{seq}
+							,#{urlInfSeq}
+							,#{colNm}
+							,#{colVal}
+  							)
+    </insert>
+    <insert id="insertTmpTbl03" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.insertTmpTbl03 */
+    	INSERT INTO 
+    		WBC_TMP_TBL03 (
+							SEQ
+							,URL_INF_SEQ
+               				,COL_NM
+							,COL_VAL
+                           ) VALUES (
+							#{seq}
+							,#{urlInfSeq}
+							,#{colNm}
+							,#{colVal}
+  							)
+    </insert>
+    <insert id="insertTmpTbl04" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.insertTmpTbl04 */
+    	INSERT INTO 
+    		WBC_TMP_TBL04 (
+							SEQ
+							,URL_INF_SEQ
+               				,COL_NM
+							,COL_VAL
+                           ) VALUES (
+							#{seq}
+							,#{urlInfSeq}
+							,#{colNm}
+							,#{colVal}
+  							)
+    </insert>
+    <insert id="insertTmpTbl05" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.insertTmpTbl05 */
+    	INSERT INTO 
+    		WBC_TMP_TBL05 (
+							SEQ
+							,URL_INF_SEQ
+               				,COL_NM
+							,COL_VAL
+                           ) VALUES (
+							#{seq}
+							,#{urlInfSeq}
+							,#{colNm}
+							,#{colVal}
+  							)
+    </insert>
+    <insert id="insertTmpTbl06" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.insertTmpTbl06 */
+    	INSERT INTO 
+    		WBC_TMP_TBL06 (
+							SEQ
+							,URL_INF_SEQ
+               				,COL_NM
+							,COL_VAL
+                           ) VALUES (
+							#{seq}
+							,#{urlInfSeq}
+							,#{colNm}
+							,#{colVal}
+  							)
+    </insert>
+    <insert id="insertTmpTbl07" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.insertTmpTbl07 */
+    	INSERT INTO 
+    		WBC_TMP_TBL07 (
+							SEQ
+							,URL_INF_SEQ
+               				,COL_NM
+							,COL_VAL
+                           ) VALUES (
+							#{seq}
+							,#{urlInfSeq}
+							,#{colNm}
+							,#{colVal}
+  							)
+    </insert>
+    <insert id="insertTmpTbl08" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.insertTmpTbl08 */
+    	INSERT INTO 
+    		WBC_TMP_TBL08 (
+							SEQ
+							,URL_INF_SEQ
+               				,COL_NM
+							,COL_VAL
+                           ) VALUES (
+							#{seq}
+							,#{urlInfSeq}
+							,#{colNm}
+							,#{colVal}
+  							)
+    </insert>
+    <insert id="insertTmpTbl09" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.insertTmpTbl09 */
+    	INSERT INTO 
+    		WBC_TMP_TBL09 (
+							SEQ
+							,URL_INF_SEQ
+               				,COL_NM
+							,COL_VAL
+                           ) VALUES (
+							#{seq}
+							,#{urlInfSeq}
+							,#{colNm}
+							,#{colVal}
+  							)
+    </insert>
+    <insert id="insertTmpTbl10" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.insertTmpTbl10 */
+    	INSERT INTO 
+    		WBC_TMP_TBL10 (
+							SEQ
+							,URL_INF_SEQ
+               				,COL_NM
+							,COL_VAL
+                           ) VALUES (
+							#{seq}
+							,#{urlInfSeq}
+							,#{colNm}
+							,#{colVal}
+  							)
+    </insert>
+    <insert id="insertTmpTbl11" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.insertTmpTbl11 */
+    	INSERT INTO 
+    		WBC_TMP_TBL11 (
+							SEQ
+							,URL_INF_SEQ
+               				,COL_NM
+							,COL_VAL
+                           ) VALUES (
+							#{seq}
+							,#{urlInfSeq}
+							,#{colNm}
+							,#{colVal}
+  							)
+    </insert>
+    <insert id="insertTmpTbl12" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.insertTmpTbl12 */
+    	INSERT INTO 
+    		WBC_TMP_TBL12 (
+							SEQ
+							,URL_INF_SEQ
+               				,COL_NM
+							,COL_VAL
+                           ) VALUES (
+							#{seq}
+							,#{urlInfSeq}
+							,#{colNm}
+							,#{colVal}
+  							)
+    </insert>
+    <insert id="insertTmpTbl13" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.insertTmpTbl13 */
+    	INSERT INTO 
+    		WBC_TMP_TBL13 (
+							SEQ
+							,URL_INF_SEQ
+               				,COL_NM
+							,COL_VAL
+                           ) VALUES (
+							#{seq}
+							,#{urlInfSeq}
+							,#{colNm}
+							,#{colVal}
+  							)
+    </insert>
+    <insert id="insertTmpTbl14" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.insertTmpTbl14 */
+    	INSERT INTO 
+    		WBC_TMP_TBL14 (
+							SEQ
+							,URL_INF_SEQ
+               				,COL_NM
+							,COL_VAL
+                           ) VALUES (
+							#{seq}
+							,#{urlInfSeq}
+							,#{colNm}
+							,#{colVal}
+  							)
+    </insert>
+    <insert id="insertTmpTbl15" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.insertTmpTbl15 */
+    	INSERT INTO 
+    		WBC_TMP_TBL15 (
+							SEQ
+							,URL_INF_SEQ
+               				,COL_NM
+							,COL_VAL
+                           ) VALUES (
+							#{seq}
+							,#{urlInfSeq}
+							,#{colNm}
+							,#{colVal}
+  							)
+    </insert>
+    <insert id="insertTmpTbl16" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.insertTmpTbl16 */
+    	INSERT INTO 
+    		WBC_TMP_TBL16 (
+							SEQ
+							,URL_INF_SEQ
+               				,COL_NM
+							,COL_VAL
+                           ) VALUES (
+							#{seq}
+							,#{urlInfSeq}
+							,#{colNm}
+							,#{colVal}
+  							)
+    </insert>
+    <insert id="insertTmpTbl17" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.insertTmpTbl17 */
+    	INSERT INTO 
+    		WBC_TMP_TBL17 (
+							SEQ
+							,URL_INF_SEQ
+               				,COL_NM
+							,COL_VAL
+                           ) VALUES (
+							#{seq}
+							,#{urlInfSeq}
+							,#{colNm}
+							,#{colVal}
+  							)
+    </insert>
+    <insert id="insertTmpTbl18" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.insertTmpTbl18 */
+    	INSERT INTO 
+    		WBC_TMP_TBL18 (
+							SEQ
+							,URL_INF_SEQ
+               				,COL_NM
+							,COL_VAL
+                           ) VALUES (
+							#{seq}
+							,#{urlInfSeq}
+							,#{colNm}
+							,#{colVal}
+  							)
+    </insert>
+    <insert id="insertTmpTbl19" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.insertTmpTbl19 */
+    	INSERT INTO 
+    		WBC_TMP_TBL19 (
+							SEQ
+							,URL_INF_SEQ
+               				,COL_NM
+							,COL_VAL
+                           ) VALUES (
+							#{seq}
+							,#{urlInfSeq}
+							,#{colNm}
+							,#{colVal}
+  							)
+    </insert>
+    <insert id="insertTmpTbl20" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.insertTmpTbl20 */
+    	INSERT INTO 
+    		WBC_TMP_TBL20 (
+							SEQ
+							,URL_INF_SEQ
+               				,COL_NM
+							,COL_VAL
+                           ) VALUES (
+							#{seq}
+							,#{urlInfSeq}
+							,#{colNm}
+							,#{colVal}
+  							)
+    </insert>
+    
+    <delete id="deleteTmpTbl01" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.deleteTmpTbl01 */
+    	DELETE FROM WBC_TMP_TBL01
+    </delete>
+    <delete id="deleteTmpTbl02" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.deleteTmpTbl02 */
+    	DELETE FROM WBC_TMP_TBL02
+    </delete>
+    <delete id="deleteTmpTbl03" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.deleteTmpTbl03 */
+    	DELETE FROM WBC_TMP_TBL03
+    </delete>
+    <delete id="deleteTmpTbl04" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.deleteTmpTbl04 */
+    	DELETE FROM WBC_TMP_TBL04
+    </delete>
+    <delete id="deleteTmpTbl05" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.deleteTmpTbl05 */
+    	DELETE FROM WBC_TMP_TBL05
+    </delete>
+    <delete id="deleteTmpTbl06" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.deleteTmpTbl06 */
+    	DELETE FROM WBC_TMP_TBL06
+    </delete>
+    <delete id="deleteTmpTbl07" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.deleteTmpTbl07 */
+    	DELETE FROM WBC_TMP_TBL07
+    </delete>
+    <delete id="deleteTmpTbl08" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.deleteTmpTbl08 */
+    	DELETE FROM WBC_TMP_TBL08
+    </delete>
+    <delete id="deleteTmpTbl09" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.deleteTmpTbl09 */
+    	DELETE FROM WBC_TMP_TBL09
+    </delete>
+    <delete id="deleteTmpTbl10" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.deleteTmpTbl10 */
+    	DELETE FROM WBC_TMP_TBL10
+    </delete>
+    <delete id="deleteTmpTbl11" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.deleteTmpTbl11 */
+    	DELETE FROM WBC_TMP_TBL11
+    </delete>
+    <delete id="deleteTmpTbl12" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.deleteTmpTbl12 */
+    	DELETE FROM WBC_TMP_TBL12
+    </delete>
+    <delete id="deleteTmpTbl13" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.deleteTmpTbl13 */
+    	DELETE FROM WBC_TMP_TBL13
+    </delete>
+    <delete id="deleteTmpTbl14" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.deleteTmpTbl14 */
+    	DELETE FROM WBC_TMP_TBL14
+    </delete>
+    <delete id="deleteTmpTbl15" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.deleteTmpTbl15 */
+    	DELETE FROM WBC_TMP_TBL15
+    </delete>
+    <delete id="deleteTmpTbl16" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.deleteTmpTbl16 */
+    	DELETE FROM WBC_TMP_TBL16
+    </delete>
+    <delete id="deleteTmpTbl17" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.deleteTmpTbl17 */
+    	DELETE FROM WBC_TMP_TBL17
+    </delete>
+    <delete id="deleteTmpTbl18" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.deleteTmpTbl18 */
+    	DELETE FROM WBC_TMP_TBL18
+    </delete>
+    <delete id="deleteTmpTbl19" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.deleteTmpTbl19 */
+    	DELETE FROM WBC_TMP_TBL19
+    </delete>
+    <delete id="deleteTmpTbl20" parameterType="ItmInfDVO">
+    	/* wbc.dmn.dba.DbaMapper.deleteTmpTbl20 */
+    	DELETE FROM WBC_TMP_TBL20
+    </delete>
+    
+    <insert id="executeStrSql" parameterType="DbaDVO">
+    	/* wbc.dmn.dba.DbaMapper.executeStrSql */
+    	${sql}
+    </insert>
+    
+    
+    
+    
+    
+</mapper>

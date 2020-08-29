@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+	<typeAliases>
+		<typeAlias alias="UrlInfDvo" type="xprogrammer.wbc.dmn.crawler.dvo.UrlInfDvo" />
+		<typeAlias alias="ItmInfDvo" type="xprogrammer.wbc.dmn.crawler.dvo.ItmInfDvo" />
+		<typeAlias alias="DbaDvo" type="xprogrammer.wbc.dmn.dba.dvo.DbaDvo" />
+	</typeAliases>
+
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<!-- connecting to Local MySql -->
+			<dataSource type="POOLED">
+				<property name="driver" value="net.sf.log4jdbc.DriverSpy" />
+				<property name="url" value="jdbc:log4jdbc:mysql://localhost:3306/wbc" />
+				<property name="username" value="wbc" />
+				<property name="password" value="wbcno1!" />
+			</dataSource>
+			
+			<!-- connecting to Service MySql 
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="driver" value="net.sf.log4jdbc.DriverSpy" />
+				<property name="url" value="jdbc:mysql://localhost:3306/wc" />
+				<property name="username" value="wc" />
+				<property name="password" value="wcno1!" />
+			</dataSource>			
+			--> 
+		</environment>
+	</environments>
+	
+	<mappers>
+		<mapper resource="sqlmap/wbc/dmn/crawler/CrawlerMapper.xml" />
+		<mapper resource="sqlmap/wbc/dmn/dba/DbaMapper.xml" />
+	</mappers>
+	
+</configuration>

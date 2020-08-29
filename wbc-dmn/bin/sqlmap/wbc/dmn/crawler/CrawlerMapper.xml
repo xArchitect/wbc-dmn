@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="CrawlerMapper">
+	
+	<resultMap type="UrlInfDVO" id="UrlInfMap">
+        <result property="seq"		   column="SEQ" 			javaType="String"/>
+        <result property="site"		   column="SITE" 			javaType="String"/>
+        <result property="url"		   column="URL" 			javaType="String"/>
+        <result property="paramPageNm" column="PARAM_PAGE_NM" 	javaType="String"/>
+        <result property="startPage"   column="START_PAGE" 		javaType="String"/>
+        <result property="endPage"	   column="END_PAGE" 		javaType="String"/>
+        <result property="tblId"	   column="TBL_ID" 			javaType="String"/>
+        <result property="tblNm"	   column="TBL_NM" 			javaType="String"/>
+        <result property="slctSqlTyp"  column="SLCT_SQL_TYP" 	javaType="String"/>
+    </resultMap>
+    <select id="selectUrlInfList" parameterType="UrlInfDVO" resultMap="UrlInfMap">
+    	/* wbc.dmn.crawler.CrawlerMapper.selectUrlInfList */
+		SELECT
+			SEQ
+			,SITE
+			,URL
+			,PARAM_PAGE_NM
+			,START_PAGE
+			,END_PAGE
+			,TBL_ID
+			,TBL_NM
+			,SLCT_SQL_TYP
+		FROM WBC_URL_INF
+		WHERE 1=1
+		<if test="useYn != null">AND USE_YN = #{useYn}</if>
+		ORDER BY SEQ ASC
+	</select>
+	
+	<resultMap type="ItmInfDVO" id="ItmInfMap">
+        <result property="seq"		   column="SEQ" 		javaType="String"/>
+        <result property="urlInfSeq"   column="URL_INF_SEQ" javaType="String"/>
+        <result property="xtrctTyp"    column="XTRCT_TYP" 		javaType="String"/>
+        <result property="xtrctXpath"  column="XTRCT_XPATH" javaType="String"/>
+        <result property="xtrctNm"     column="XTRCT_NM" javaType="String"/>
+        <result property="rmvTrCls"	   column="RMV_TR_CLS" 	javaType="String"/>
+        <result property="dataIdx"	   column="DATA_IDX" 	javaType="String"/>
+        <result property="dataMod"	   column="DATA_MOD" 	javaType="String"/>
+        <result property="tmpTbl"	   column="TMP_TBL" 	javaType="String"/>
+        <result property="colId"	   column="COL_ID" 		javaType="String"/>
+        <result property="colNm"  	   column="COL_NM" 		javaType="String"/>
+    </resultMap>
+    <select id="selectItmInfList" parameterType="ItmInfDVO" resultMap="ItmInfMap">
+    	/* wbc.dmn.crawler.CrawlerMapper.selectItmInfList */
+		SELECT
+			SEQ
+			,URL_INF_SEQ
+			,XTRCT_TYP
+			,XTRCT_XPATH
+			,XTRCT_NM
+			,DATA_IDX
+			,DATA_MOD
+			,TMP_TBL
+			,COL_ID
+			,COL_NM
+		FROM WBC_ITM_INF
+		WHERE 1=1
+		<if test="urlInfSeq != null">AND URL_INF_SEQ = #{urlInfSeq}</if>
+		ORDER BY TMP_TBL ASC
+	</select>
+	
+</mapper>

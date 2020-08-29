@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC
+  "-//APACHE//DTD LOG4J 1.2//EN" "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- Appenders -->
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p: %c - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="daily" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/wc-dmn.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{HH:mm:ss.SSS}] %-5p %C{1}.%M(%F:%L) - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="rolling" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="/wc-dmn-rolling.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="102400KB" />
+		<param name="MaxBackupIndex" value="3" />
+		<param name="ImmediateFlush" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}] [%-5p] [%t] [%c{1} (%L)] %m %n" />
+		</layout>
+	</appender>
+
+	<!-- Application Loggers -->
+	<logger name="xprogrammer">
+		<level value="debug" />
+	</logger>
+
+	<logger name="sql">
+		<level value="debug" />
+	</logger>
+
+	<!-- log SQL (pre-execution) plus exceptions caused by SQL -->
+	<logger name="jdbc.sqlonly" additivity="true">
+		<level value="debug" />
+		<appender-ref ref="console" />
+		<appender-ref ref="rolling"/>
+	</logger>
+
+	<!-- log SQL with timing information, post execution -->
+	<logger name="jdbc.sqltiming" additivity="false">
+		<level value="error" />
+		<appender-ref ref="console" />
+		<appender-ref ref="rolling"/>
+	</logger>
+
+	<!-- only use the two logs below to trace ALL JDBC information,
+		NOTE:  This can be very voluminous!  -->
+	<!-- log all jdbc calls except ResultSet calls -->
+	<logger name="jdbc.audit" additivity="false">
+		<level value="error" />
+		<appender-ref ref="console" />
+		<appender-ref ref="rolling"/>
+	</logger>
+
+	<!-- log the jdbc ResultSet calls -->
+	<logger name="jdbc.resultset" additivity="false">
+		<level value="error" />
+		<appender-ref ref="console" />
+		<appender-ref ref="rolling"/>
+	</logger>
+
+	<root>
+		<!-- 서버에 업로드할 때는 priority를 error로 변경할 것 -->
+		<priority value="error" />
+		<appender-ref ref="console" />
+		<appender-ref ref="daily" />
+	</root>
+
+</log4j:configuration>
